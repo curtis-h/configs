@@ -1,0 +1,218 @@
+# starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# command_timeout = 1000
+
+# Change the default prompt format
+# format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+format = """\
+[╭╴](238)\
+$os\
+$directory\
+$fill\
+
+$git_branch\
+$git_status\
+$git_commit\
+$git_state\
+$git_metrics\
+
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$conda\
+$meson\
+$spack\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$crystal\
+$shlvl\
+$singularity\
+$kubernetes\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+
+$fill\
+
+
+$username\
+$hostname\
+$localip\
+
+$sudo\
+$jobs\
+
+$memory_usage\
+$battery\
+$container\
+$shell\
+$nix_shell\
+$direnv\
+$env_var\
+$fill\
+
+$cmd_duration\
+$time\
+$line_break\
+
+[╰─](238)$character\
+"""
+
+# right_format = """$all"""
+
+[fill]
+symbol = ' '
+
+# Change the default prompt characters
+[character]
+success_symbol = "[⭘ ](238)"
+error_symbol = "[ ](red bold)"
+
+[os]
+format = '[$symbol](white) '
+disabled = false
+
+[os.symbols]
+# Windows = ''
+Windows = ''
+# Windows = '󰨡'
+Arch = '󰣇 '
+Ubuntu = ' '
+Macos = '󰀵 '
+Kali = ' '
+# Linux = "󰌽"
+
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style)'
+truncation_length = 7
+truncation_symbol = '…/'
+truncate_to_repo = false
+before_repo_root_style = "black bold dimmed"
+repo_root_style = "cyan bold"
+home_symbol = '󰋜 '
+read_only = '  '
+read_only_style = "197"
+
+
+[git_branch]
+symbol = ''
+format = "[$symbol $branch]($style) "
+# truncation_length = 4
+truncation_symbol = "/"
+style = "cyan bold"
+
+[git_status]
+format = '[$ahead_behind$all_status]($style) '
+style = "cyan bold"
+up_to_date = "[󰸞](green bold) "
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+staged = '[++\($count\)](green)'
+modified = " "
+untracked = " "
+stashed = " "
+conflicted = "🏳"
+renamed = '襁 '
+deleted = " "
+
+[git_commit]
+style = "cyan bold"
+
+[package]
+format = " [$symbol$version]($style) "
+disabled = true
+
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style)"
+disabled = false
+# show_always = true
+
+[hostname]
+format = "[$ssh_symbol$hostname]($style)"
+
+
+[time]
+disabled = false
+format = "[ $time]($style)"
+
+
+[python]
+format = "[󱔎 ]($style) "
+
+[nodejs]
+format = "[󰎙 ]($style) "
+
+[ruby]
+format = "[ ]($style) "
+
+
+[docker_context]
+format = "[ $context](bold blue) "
+
+[helm]
+format = "[ $version](bold purple) "
+
+[kubernetes]
+format = '[ $context\($namespace\)](bold purple) '
+
+[terraform]
+format = "[ ]($style) 壟 [$workspace]($style) "
+
+[vagrant]
+format = "[ ]($style) "
