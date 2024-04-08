@@ -145,6 +145,8 @@ home_symbol = '󰋜 '
 read_only = '  '
 read_only_style = "197"
 
+[directory.substitutions]
+
 
 [git_branch]
 symbol = ''
@@ -216,3 +218,6 @@ format = "[ ]($style) 壟 [$workspace]($style) "
 
 [vagrant]
 format = "[ ]($style) "
+
+[container]
+disabled = true
