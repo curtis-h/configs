@@ -18,6 +18,7 @@ $git_status\
 $git_commit\
 $git_state\
 $git_metrics\
+$fill\
 
 $package\
 $c\
@@ -194,30 +195,45 @@ disabled = false
 format = "[ $time]($style)"
 
 
-[python]
-format = "[󱔎 ]($style) "
+[gradle]
+format = "[$symbol ]($style)"
+
+[java]
+format = "[$symbol]($style)"
+
+[kotlin]
+format = "[$symbol ]($style)"
 
 [nodejs]
-format = "[󰎙 ]($style) "
+format = "[󰎙 ]($style)"
+
+[python]
+format = "[󱔎 ]($style)"
 
 [ruby]
-format = "[ ]($style) "
+format = "[$symbol ]($style)"
+# format = "[ ]($style) "
 
+[rust]
+format = "[$symbol ]($style)"
+
+[swift]
+format = "[$symbol ]($style)"
 
 [docker_context]
-format = "[ $context](bold blue) "
+format = "[ $context](bold blue)"
 
 [helm]
-format = "[ $version](bold purple) "
+format = "[ $version](bold purple)"
 
 [kubernetes]
-format = '[ $context\($namespace\)](bold purple) '
+format = '[ $context\($namespace\)](bold purple)'
 
 [terraform]
-format = "[ ]($style) 壟 [$workspace]($style) "
+format = "[ ]($style) 壟 [$workspace]($style)"
 
 [vagrant]
-format = "[ ]($style) "
+format = "[ ]($style)"
 
 [container]
 disabled = true
