@@ -5,7 +5,7 @@ alias ...='cd ../..'
 # https://github.com/eza-community/eza
 alias l='eza -lF --git --icons --group-directories-first --time-style relative'
 # all detail
-alias la='eza -AlF --icons --time-style long-iso'
+alias la='eza -AlF --icons --time-style long-iso --git-repos'
 alias ll='la'
 # tree
 alias ld='eza -lF -T --level=2 --icons --time-style relative'
@@ -16,3 +16,5 @@ alias cp='cp -v'
 alias ln='ln -v'
 alias mv='mv -v'
 alias rm='rm -v'
+
+alias tsnode="ts-node -O '{\"module\": \"commonjs\"}'"
