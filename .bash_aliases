@@ -4,11 +4,14 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # https://github.com/eza-community/eza
-alias l='eza -lF --git --icons --group-directories-first --time-style relative'
-alias la='eza -AlF --icons --time-style long-iso --git-repos --group-directories-first'
+alias l='eza --color=always --long --classify --git --icons --group-directories-first --time-style relative'
+alias la='eza --color=always --almost-all --long --classify --icons --time-style long-iso --git-repos --group-directories-first'
 alias ll='la'
-alias lt='eza -lF -T --level=2 --icons --time-style relative'
-alias ltt='eza -lF -T --level=3 --icons --time-style relative'
+alias lt='eza --color=always --long --classify --tree --level=2 --icons --git --time-style relative'
+alias ltt='eza --color=always --long --classify --tree --level=5 --icons --git --time-style relative'
+
+# less: keep ANSI colors when piping colored output (eza, git, ...)
+export LESS='-RFX'
 
 # flags
 alias cp='cp -v'
@@ -27,9 +30,11 @@ alias df='duf'
 alias du='ncdu'
 
 alias path='echo -e ${PATH//:/\\n}'  # print PATH one entry per line
-alias reload='exec bash'  # replace this shell with a fresh one
 
-alias tsnode="ts-node -O '{\"module\": \"commonjs\"}'"
+# tools
+alias reload='source ~/.bashrc'
+alias tsnode="ts-node -O '{\"module\": \"commonjs\":}'"
+alias jail='ai-jail'
 
 # mkcd: make a dir and cd into it
 mkcd() { mkdir -p "$1" && cd "$1"; }
@@ -55,3 +60,6 @@ clean_git_branch() {
 
   echo "Deleted branch: $branch"
 }
+
+# omarchy aliases
+unalias a c cx cy d r t h ic ix icx
