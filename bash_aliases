@@ -35,6 +35,7 @@ alias path='echo -e ${PATH//:/\\n}'  # print PATH one entry per line
 alias reload='source ~/.bashrc'
 alias tsnode="ts-node -O '{\"module\": \"commonjs\":}'"
 alias jail='ai-jail'
+alias oc='jail opencode'
 
 # mkcd: make a dir and cd into it
 mkcd() { mkdir -p "$1" && cd "$1"; }

@@ -1,0 +1,10 @@
+# ~/.ai-jail — global ai-jail defaults (trusted layer)
+# Gives sandboxed sessions a real mise toolchain: config + installs, read-only.
+ro_maps = ["~/.config/mise", "~/.local/share/mise"]
+
+[commands.pi]
+agent_state = true
+network = true
+
+[commands.opencode]
+network = true
