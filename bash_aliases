@@ -2,8 +2,9 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ~='cd ~'
 
-# https://github.com/eza-community/eza
+# ls: https://github.com/eza-community/eza
 alias l='eza --color=always --long --classify --git --icons --group-directories-first --time-style relative'
 alias la='eza --color=always --almost-all --long --classify --icons --time-style long-iso --git-repos --group-directories-first'
 alias ll='la'
@@ -37,6 +38,7 @@ alias tsnode="ts-node -O '{\"module\": \"commonjs\":}'"
 alias jail='ai-jail'
 alias oc='jail opencode'
 
+# functions
 # mkcd: make a dir and cd into it
 mkcd() { mkdir -p "$1" && cd "$1"; }
 

@@ -23,7 +23,7 @@ if [[ "${1:-}" == "--dry-run" ]]; then
 fi
 
 # Repo files that must never be linked into $HOME.
-skip=(install.sh README.md LICENSE .gitignore .gitattributes)
+skip=(install.sh README.md LICENSE .gitignore .gitattributes bash_aliases)
 
 is_skipped() {
   local candidate="$1" name
